@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+anthropic
+PyGithub
+python-dotenv
+pydantic
+httpx
+cryptography
