@@ -1,0 +1,6 @@
+.env
+*.pem
+venv/
+__pycache__/
+.pytest_cache/
+ngrok.exe
