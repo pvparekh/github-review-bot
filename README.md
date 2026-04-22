@@ -1,4 +1,4 @@
-# senior-code-ai-reviewer 
+# Github Review Bot (AI Senior Engineer)
 
 An autonomous AI code review agent that installs as a GitHub App and automatically reviews pull requests using Claude. When a PR is opened or updated, it fetches the diff, runs a two-pass Claude pipeline, and posts inline comments on specific lines + a structured summary — like having a senior engineer review every commit.
 
