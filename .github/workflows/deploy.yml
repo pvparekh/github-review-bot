@@ -16,7 +16,8 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_KEY }}
           script: |
-            cd ~/GithubCodeReviewBot
+            cd /home/ubuntu/github-review-bot
             git pull origin main
-            docker compose build
-            docker compose up -d
+            docker build -t github-review-bot .
+            docker rm -f github-review-bot
+            docker run -d --name github-review-bot --env-file .env -p 8000:8000 -v /home/ubuntu/github-review-bot/private-key.pem:/app/private-key.pem --restart unless-stopped github-review-bot
